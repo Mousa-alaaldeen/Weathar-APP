@@ -25,15 +25,6 @@ class WeatherCubit extends Cubit<WeatherStates> {
   List<Tt> forecastData = [];
   List<Tt> dailyForecastData = [];
 
-        // Color getTemperatureColor(double temperature) {
-        //   if (temperature < 10) {
-        //     return Colors.blue;
-        //   } else if (temperature < 20) {
-        //     return Colors.green;
-        //   } else {
-        //     return Colors.red;
-        //   }
-        // }
   void getWeatherForecast({
     required double latitude,
     required double longitude,

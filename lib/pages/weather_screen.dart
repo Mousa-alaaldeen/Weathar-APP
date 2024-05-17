@@ -34,6 +34,25 @@ class WeatherScreen extends StatelessWidget {
             ),
           );
         }
+        if (state is GetWeatherErrorState ||
+            state is GetFiveDaysThreeHoursForecastDataErrorState ||
+            state is SearchWeatherErrorState ||
+            state is GetFiveDaysThreeHoursForecastDataErrorState) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text(
+                "Please check your internet connection and try again.",
+                style: Theme.of(context).textTheme.caption!.copyWith(
+                      color: Colors.white,
+                      fontSize: 16,
+                      fontFamily: 'flutterfonts',
+                    ),
+              ),
+              backgroundColor: Colors.red,
+              duration: Duration(seconds: 5),
+            ),
+          );
+        }
       },
       builder: (BuildContext context, state) {
         var cubit = WeatherCubit.get(context);
