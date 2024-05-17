@@ -1,6 +1,8 @@
 // ignore_for_file: depend_on_referenced_packages, avoid_print, unused_import
 
 import 'dart:convert';
+import 'dart:ui';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:http/http.dart' as http;
 import 'package:weatherapp/models/coored.dart';
@@ -23,6 +25,15 @@ class WeatherCubit extends Cubit<WeatherStates> {
   List<Tt> forecastData = [];
   List<Tt> dailyForecastData = [];
 
+        // Color getTemperatureColor(double temperature) {
+        //   if (temperature < 10) {
+        //     return Colors.blue;
+        //   } else if (temperature < 20) {
+        //     return Colors.green;
+        //   } else {
+        //     return Colors.red;
+        //   }
+        // }
   void getWeatherForecast({
     required double latitude,
     required double longitude,

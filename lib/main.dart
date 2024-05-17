@@ -4,7 +4,7 @@ import 'package:cubit_form/cubit_form.dart';
 import 'package:flutter/material.dart';
 import 'package:weatherapp/utils/cubit.dart/cubit.dart';
 import 'package:weatherapp/utils/cubit.dart/states.dart';
-import 'package:weatherapp/widget/weather_screen.dart';
+import 'package:weatherapp/pages/weather_screen.dart';
 
 void main() {
   runApp(MyApp());
