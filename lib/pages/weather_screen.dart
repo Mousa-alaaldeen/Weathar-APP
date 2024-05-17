@@ -43,16 +43,11 @@ class WeatherScreen extends StatelessWidget {
             body: ConditionalBuilder(
                 condition: cubit.currentWeatherModel != null,
                 builder: (BuildContext context) {
-                  // Color temperatureColor = cubit.getTemperatureColor(
-                  //     cubit.currentWeatherModel!.main!.temp! - 273.15);
-
                   return SingleChildScrollView(
                     child: Column(
                       children: [
                         CustomContainer(
-                            // temperatureColor: temperatureColor,
-                            searchController: searchController,
-                            cubit: cubit),
+                            searchController: searchController, cubit: cubit),
                         Padding(
                           padding: EdgeInsets.symmetric(
                               horizontal: 15, vertical: 20),
