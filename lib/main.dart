@@ -15,11 +15,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiBlocProvider(
-      providers: [
-        BlocProvider(
-            create: (context) => WeatherCubit()..fetchLocationAndWeather())
-      ],
+    return BlocProvider(
+      create: (context) => WeatherCubit()..fetchLocationAndWeather(),
       child: BlocConsumer<WeatherCubit, WeatherStates>(
         listener: (BuildContext context, Object? state) {},
         builder: (context, state) => MaterialApp(

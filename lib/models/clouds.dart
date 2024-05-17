@@ -1,15 +1,15 @@
-// class Clouds {
-//   final int? all;
+class Clouds {
+  final int? all;
 
-//   Clouds({this.all});
+  Clouds({this.all});
 
-//   factory Clouds.fromJson(dynamic json) {
-//     if (json == null) {
-//       return Clouds();
-//     }
+  factory Clouds.fromJson(dynamic json) {
+    if (json == null) {
+      return Clouds();
+    }
 
-//     return Clouds(
-//       all: json['all'],
-//     );
-//   }
-// }
+    return Clouds(
+      all: json['all'],
+    );
+  }
+}
